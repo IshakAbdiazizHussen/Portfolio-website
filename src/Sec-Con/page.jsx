@@ -1,78 +1,66 @@
-import React from 'react';
+import React from "react";
 
 export default function SecCon() {
+  const services = [
+    {
+      id: "01",
+      title: "Web Development",
+      desc: "Modern responsive websites and web apps built with React, Next.js, and Tailwind CSS.",
+      tag: "Frontend",
+    },
+    {
+      id: "02",
+      title: "Full-Stack Solutions",
+      desc: "End-to-end product development from database design to polished UI and deployment.",
+      tag: "Full Stack",
+    },
+    {
+      id: "03",
+      title: "Fruit Store Management System",
+      desc: "Complete system to manage fruits, stock, sales, pricing, and daily records with a clean dashboard.",
+      tag: "Management",
+    },
+    {
+      id: "04",
+      title: "Maintenance & Support",
+      desc: "Continuous improvements, bug fixing, and performance optimization after launch.",
+      tag: "Support",
+    },
+  ];
+
   return (
-    <div className="p-10 mt-20">
-      {/* Title */}
-      <h3 className="bg-gradient-to-r from-sky-300 to-white bg-clip-text text-transparent text-center text-4xl md:text-5xl font-bold">
-        My Quality Services
-      </h3>
+    <section className="py-12 md:py-16">
+      <div className="text-center mb-10 md:mb-14">
+        <h3 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-300 via-sky-300 to-violet-300 bg-clip-text text-transparent">
+          My Quality Services
+        </h3>
+        <p className="text-gray-300 mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
+          I deliver reliable web products with clean code, strong architecture, and user-focused design.
+        </p>
+      </div>
 
-      {/* Subtitle */}
-      <p className="text-xl  text-white/90 mt-8 text-center max-w-4xl mx-auto leading-relaxed">
-        I build fast, modern, and scalable web applications using React, Next.js, Node.js, and MongoDB.
-        <br className="hidden md:inline" /> From beautiful frontends to powerful backends — I deliver complete solutions that perform, convert, and grow with your vision.
-      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        {services.map((service) => (
+          <article
+            key={service.id}
+            className="group rounded-2xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]"
+          >
+            <div className="flex items-start justify-between gap-4 mb-5">
+              <span className="text-xl md:text-2xl font-extrabold text-cyan-300">{service.id}</span>
+              <span className="text-xs md:text-sm px-3 py-1 rounded-full border border-white/20 bg-black/20 text-white/90">
+                {service.tag}
+              </span>
+            </div>
 
-      {/* Services List */}
-      <section className="mt-20 space-y-6">
-        {/* Service 01 */}
-        <div className="w-full max-w-5xl mx-auto px-8 md:px-10 py-8 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full flex 
-          flex-col md:flex-row items-center justify-between text-white shadow-2xl hover:shadow-purple-500/50 transition">
-          <div className="flex items-center gap-6 mb-4 md:mb-0">
-            <span className="text-2xl md:text-3xl font-bold">01</span>
-            <h4 className="text-xl md:text-2xl font-bold">Web Development</h4>
-          </div>
+            <h4 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-3">{service.title}</h4>
+            <p className="text-gray-300 leading-relaxed">{service.desc}</p>
 
-          <p className="text-sm md:text-base text-white/80 text-center md:text-left max-w-md px-4">
-            Modern, fast, responsive websites & web apps built with React, Next.js, and Tailwind CSS — pixel-perfect on every device.
-          </p>
-
-          <span className="text-3xl mt-4 md:mt-0">→</span>
-        </div>
-
-        {/* Service 02 */}
-        <div className="w-full max-w-5xl mx-auto px-8 md:px-10 py-8 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full flex flex-col md:flex-row items-center justify-between text-white shadow-2xl hover:shadow-purple-500/50 transition">
-          <div className="flex items-center gap-6 mb-4 md:mb-0">
-            <span className="text-2xl md:text-3xl font-bold">02</span>
-            <h4 className="text-xl md:text-2xl font-bold">Full-Stack Solutions</h4>
-          </div>
-
-          <p className="text-sm md:text-base text-white/80 text-center md:text-left max-w-md px-4">
-            End-to-end development — from database design to stunning UI. One developer, full control, zero compromises.
-          </p>
-
-          <span className="text-3xl mt-4 md:mt-0">→</span>
-        </div>
-
-        {/* Service 03 */}
-        <div className="w-full max-w-5xl mx-auto px-8 md:px-10 py-8 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full flex flex-col md:flex-row items-center justify-between text-white shadow-2xl hover:shadow-purple-500/50 transition">
-          <div className="flex items-center gap-6 mb-4 md:mb-0">
-            <span className="text-2xl md:text-3xl font-bold">03</span>
-            <h4 className="text-xl md:text-2xl font-bold">API & Backend</h4>
-          </div>
-
-          <p className="text-sm md:text-base text-white/80 text-center md:text-left max-w-md px-4">
-                Secure, scalable REST & GraphQL APIs with Node.js, Express, and MongoDB — built to grow with your traffic.
-          </p>
-
-          <span className="text-3xl mt-4 md:mt-0">→</span>
-        </div>
-
-        {/* Service 04 */}
-        <div className="w-full max-w-5xl mx-auto px-8 md:px-10 py-8 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full flex flex-col md:flex-row items-center justify-between text-white shadow-2xl hover:shadow-purple-500/50 transition">
-          <div className="flex items-center gap-6 mb-4 md:mb-0">
-            <span className="text-2xl md:text-3xl font-bold">04</span>
-            <h4 className="text-xl md:text-2xl font-bold">Maintenance & Support</h4>
-          </div>
-
-          <p className="text-sm md:text-base text-white/80 text-center md:text-left max-w-md px-4">
-            Ongoing updates, bug fixes, performance optimization, and 24/7 support — your app stays perfect forever.
-          </p>
-
-          <span className="text-3xl mt-4 md:mt-0">→</span>
-        </div>
-      </section>
-    </div>
+            <div className="mt-6 text-cyan-300 font-semibold group-hover:translate-x-1 transition-transform">
+              Learn More →
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }

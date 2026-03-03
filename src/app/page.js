@@ -5,6 +5,7 @@ import NextCon from "../MIN-CON/page";
 import SecCon from "../Sec-Con/page";
 import ThirdCon from "@/ThirdCon/page";
 import Footer from "@/Footer/Footer";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Home() {
   const skills = [
@@ -39,8 +40,12 @@ export default function Home() {
                 <li><a href="#contact" className="hover:text-cyan-300 transition">Contact</a></li>
               </ul>
 
+              <div className="hidden md:block">
+                <ThemeSwitcher />
+              </div>
+
               <a
-                href="#contact"
+                href="#contact-special"
                 className="hidden md:inline-flex px-8 py-3 bg-cyan-300 text-black font-bold rounded-full hover:bg-cyan-400 hover:scale-105 transition-all duration-200 shadow-xl"
               >
                 Get In Touch
@@ -66,11 +71,14 @@ export default function Home() {
                 <li><a href="#contact" className="hover:text-cyan-300 transition">Contact</a></li>
               </ul>
               <a
-                href="#contact"
+                href="#contact-special"
                 className="mb-2 w-full text-center px-8 py-3 bg-cyan-300 text-black font-bold rounded-full hover:bg-cyan-400 transition-all duration-200 shadow-xl"
               >
                 Get In Touch
               </a>
+              <div className="mt-2 mb-2">
+                <ThemeSwitcher />
+              </div>
             </div>
           </nav>
         </header>
@@ -122,7 +130,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-10">
-                <a href="#work" className="w-full sm:w-auto text-center px-10 py-4 bg-white text-purple-700 font-bold rounded-full hover:scale-105 transition-all shadow-2xl">
+                <a href="#project-form" className="w-full sm:w-auto text-center px-10 py-4 bg-white text-purple-700 font-bold rounded-full hover:scale-105 transition-all shadow-2xl">
                   View My Work
                 </a>
                 <button className="w-full sm:w-auto px-10 py-4 rounded-full border border-cyan-300/60 text-cyan-200 font-semibold hover:bg-cyan-300/10 transition-all">
@@ -147,6 +155,42 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="project-form" className="container mx-auto px-6 pb-10">
+          <div className="max-w-6xl mx-auto rounded-2xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm">
+            <h4 className="text-2xl md:text-3xl font-bold text-cyan-300 mb-2">Selected Work</h4>
+            <p className="text-gray-300 mb-6">
+              Real work I deliver: modern interfaces, scalable backend APIs, and complete full-stack products.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <article className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <p className="text-xs text-cyan-300 font-semibold mb-2">PROJECT 01</p>
+                <h5 className="text-lg font-bold text-white mb-2">Portfolio Website</h5>
+                <p className="text-gray-300 text-sm">Responsive personal site with smooth sections, custom UI, and modern interactions.</p>
+              </article>
+
+              <article className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <p className="text-xs text-cyan-300 font-semibold mb-2">PROJECT 02</p>
+                <h5 className="text-lg font-bold text-white mb-2">Business Landing Page</h5>
+                <p className="text-gray-300 text-sm">Conversion-focused layout with clear CTAs, mobile optimization, and performance tuning.</p>
+              </article>
+
+              <article className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <p className="text-xs text-cyan-300 font-semibold mb-2">PROJECT 03</p>
+                <h5 className="text-lg font-bold text-white mb-2">Fruit Store Management System</h5>
+                <p className="text-gray-300 text-sm">System for managing fruit inventory, sales, pricing, and daily operations with an easy dashboard.</p>
+              </article>
+
+              <article className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <p className="text-xs text-cyan-300 font-semibold mb-2">PROJECT 04</p>
+                <h5 className="text-lg font-bold text-white mb-2">Ongoing Support</h5>
+                <p className="text-gray-300 text-sm">Maintenance, bug fixes, and continuous improvements for long-term product quality.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section id="about" className="container mx-auto px-6 pb-8">
           <div className="max-w-4xl mx-auto rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-3 text-cyan-300">About Me</h3>
@@ -194,6 +238,25 @@ export default function Home() {
 
         <section id="experience" className="container mx-auto px-6 pb-8">
           <ThirdCon />
+        </section>
+
+        <section id="contact-special" className="container mx-auto px-6 pb-8">
+          <div className="max-w-5xl mx-auto rounded-3xl border border-cyan-300/30 bg-gradient-to-r from-cyan-400/10 via-purple-400/10 to-pink-400/10 p-8 md:p-10 text-center shadow-[0_0_40px_rgba(34,211,238,0.15)]">
+            <h3 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">
+              Let&apos;s Start Your Project
+            </h3>
+            <p className="mt-4 text-gray-200 max-w-2xl mx-auto text-base md:text-lg">
+              Ready to work together? Reach me directly and I will help you plan, build, and launch your idea.
+            </p>
+            <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="mailto:ishakabdiaziz9060@gmail.com" className="px-8 py-3 rounded-full bg-cyan-300 text-black font-bold hover:bg-cyan-400 transition">
+                Email Me
+              </a>
+              <a href="tel:+252610909060" className="px-8 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition">
+                Call Me
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="contact">
