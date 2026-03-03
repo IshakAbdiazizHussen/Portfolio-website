@@ -1,0 +1,24 @@
+Ishak Abdiaziz
+Full-Stack Web Developer
+
+Phone: +252 610 909 060
+Email: ishakabdiaziz9060@gmail.com
+Location: Mogadishu, Somalia
+
+Skills:
+- JavaScript / TypeScript
+- React / Next.js
+- Node.js / Express
+- MongoDB
+- HTML / CSS / Tailwind CSS
+
+Experience:
+- Full-Stack Web Developer (2025 - Present)
+- Frontend Developer (2024 - 2025)
+- Learning & Foundations (2023 - 2024)
+
+Education:
+- BSc in Computer Science
+- Web Development Bootcamp
+- Specialized Courses in JavaScript, React, Next.js, Node.js
+

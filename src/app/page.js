@@ -133,9 +133,13 @@ export default function Home() {
                 <a href="#project-form" className="w-full sm:w-auto text-center px-10 py-4 bg-white text-purple-700 font-bold rounded-full hover:scale-105 transition-all shadow-2xl">
                   View My Work
                 </a>
-                <button className="w-full sm:w-auto px-10 py-4 rounded-full border border-cyan-300/60 text-cyan-200 font-semibold hover:bg-cyan-300/10 transition-all">
+                <a
+                  href="/Ishak-CV.txt"
+                  download="Ishak-CV.txt"
+                  className="w-full sm:w-auto text-center px-10 py-4 rounded-full border border-cyan-300/60 text-cyan-200 font-semibold hover:bg-cyan-300/10 transition-all"
+                >
                   Download CV
-                </button>
+                </a>
               </div>
 
               <div className="grid grid-cols-3 gap-3 md:gap-5 max-w-xl mx-auto lg:mx-0">
