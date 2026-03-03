@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const THEMES = ["default", "dark", "light"];
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher({ compact = false }) {
   const [theme, setTheme] = useState("default");
 
   useEffect(() => {
@@ -21,13 +21,13 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className={compact ? "grid grid-cols-3 gap-2 w-full" : "flex items-center gap-2"}>
       {THEMES.map((item) => (
         <button
           key={item}
           type="button"
           onClick={() => applyTheme(item)}
-          className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition ${
+          className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition text-center ${
             theme === item
               ? "bg-cyan-300 text-black border-cyan-300"
               : "bg-black/20 text-white border-white/25 hover:bg-white/10"
@@ -39,4 +39,3 @@ export default function ThemeSwitcher() {
     </div>
   );
 }
-

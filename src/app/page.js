@@ -27,12 +27,18 @@ export default function Home() {
           <nav className="container mx-auto px-6 py-4">
             <input id="nav-toggle" type="checkbox" className="peer sr-only" />
 
-            <div className="flex items-center justify-between">
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                I.Dev
+            <div className="flex items-center justify-between gap-4 md:gap-6">
+              <h1 className="relative">
+                <span className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-300 via-sky-300 to-violet-300 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(34,211,238,0.35)]">
+                  I
+                </span>
+                <span className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
+                  .Dev
+                </span>
+                <span className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-cyan-300/80 via-sky-300/60 to-violet-300/80"></span>
               </h1>
 
-              <ul className="hidden md:flex items-center gap-8 text-lg font-medium">
+              <ul className="hidden md:flex items-center gap-10 text-lg font-medium">
                 <li><a href="#home" className="hover:text-cyan-300 transition">Home</a></li>
                 <li><a href="#work" className="hover:text-cyan-300 transition">Work</a></li>
                 <li><a href="#services" className="hover:text-cyan-300 transition">Services</a></li>
@@ -40,44 +46,46 @@ export default function Home() {
                 <li><a href="#contact" className="hover:text-cyan-300 transition">Contact</a></li>
               </ul>
 
-              <div className="hidden md:block">
+              <div className="hidden md:block ml-2">
                 <ThemeSwitcher />
               </div>
 
               <a
                 href="#contact-special"
-                className="hidden md:inline-flex px-8 py-3 bg-cyan-300 text-black font-bold rounded-full hover:bg-cyan-400 hover:scale-105 transition-all duration-200 shadow-xl"
+                className="hidden md:inline-flex ml-2 px-8 py-3 bg-cyan-300 text-black font-bold rounded-full hover:bg-cyan-400 hover:scale-105 transition-all duration-200 shadow-xl"
               >
                 Get In Touch
               </a>
 
               <label
                 htmlFor="nav-toggle"
-                className="md:hidden inline-flex flex-col items-center justify-center rounded-lg border border-white/20 px-3 py-2 cursor-pointer"
+                className="md:hidden inline-flex flex-col items-center justify-center rounded-xl border border-white/20 bg-white/5 px-3 py-2 cursor-pointer shadow-lg"
                 aria-label="Toggle navigation menu"
               >
-                <span className="block h-0.5 w-5 bg-white mb-1.5"></span>
-                <span className="block h-0.5 w-5 bg-white mb-1.5"></span>
-                <span className="block h-0.5 w-5 bg-white"></span>
+                <span className="block h-0.5 w-5 bg-white mb-1.5 rounded-full"></span>
+                <span className="block h-0.5 w-5 bg-white mb-1.5 rounded-full"></span>
+                <span className="block h-0.5 w-5 bg-white rounded-full"></span>
               </label>
             </div>
 
-            <div className="md:hidden overflow-hidden max-h-0 peer-checked:max-h-96 transition-all duration-300">
-              <ul className="pt-4 pb-2 flex flex-col gap-4 text-lg font-medium">
-                <li><a href="#home" className="hover:text-cyan-300 transition">Home</a></li>
-                <li><a href="#work" className="hover:text-cyan-300 transition">Work</a></li>
-                <li><a href="#services" className="hover:text-cyan-300 transition">Services</a></li>
-                <li><a href="#experience" className="hover:text-cyan-300 transition">Experience</a></li>
-                <li><a href="#contact" className="hover:text-cyan-300 transition">Contact</a></li>
+            <div className="md:hidden overflow-hidden max-h-0 peer-checked:max-h-[36rem] transition-all duration-300">
+              <div className="mt-4 mb-2 rounded-2xl border border-white/10 bg-black/25 backdrop-blur-md p-4">
+              <ul className="flex flex-col gap-3 text-base font-semibold">
+                <li><a href="#home" className="block px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-cyan-300/15 hover:border-cyan-300/40 transition">Home</a></li>
+                <li><a href="#work" className="block px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-cyan-300/15 hover:border-cyan-300/40 transition">Work</a></li>
+                <li><a href="#services" className="block px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-cyan-300/15 hover:border-cyan-300/40 transition">Services</a></li>
+                <li><a href="#experience" className="block px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-cyan-300/15 hover:border-cyan-300/40 transition">Experience</a></li>
+                <li><a href="#contact" className="block px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-cyan-300/15 hover:border-cyan-300/40 transition">Contact</a></li>
               </ul>
               <a
                 href="#contact-special"
-                className="mb-2 w-full text-center px-8 py-3 bg-cyan-300 text-black font-bold rounded-full hover:bg-cyan-400 transition-all duration-200 shadow-xl"
+                className="mt-4 mb-3 w-full text-center px-8 py-3 bg-cyan-300 text-black font-bold rounded-xl hover:bg-cyan-400 transition-all duration-200 shadow-xl"
               >
                 Get In Touch
               </a>
-              <div className="mt-2 mb-2">
-                <ThemeSwitcher />
+              <div className="mt-2">
+                <ThemeSwitcher compact />
+              </div>
               </div>
             </div>
           </nav>
