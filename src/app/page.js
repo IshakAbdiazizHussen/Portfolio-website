@@ -6,6 +6,7 @@ import SecCon from "../Sec-Con/page";
 import ThirdCon from "@/ThirdCon/page";
 import Footer from "@/Footer/Footer";
 import ThemeSwitcher from "./ThemeSwitcher";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Home() {
   const skills = [
@@ -22,8 +23,9 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white scroll-smooth">
+        <ScrollReveal />
         {/* Navigation */}
-        <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-900/50 backdrop-blur-lg">
+        <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-900/50 backdrop-blur-lg anim-fade">
           <nav className="container mx-auto px-6 py-4">
             <input id="nav-toggle" type="checkbox" className="peer sr-only" />
 
@@ -94,11 +96,11 @@ export default function Home() {
         {/* Hero Section */}
         <section id="home" className="container mx-auto px-6 py-16 md:py-24">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative flex justify-center lg:justify-start">
+            <div className="relative flex justify-center lg:justify-start anim-fade-up" data-reveal>
               <div className="absolute -top-6 -left-3 w-28 h-28 rounded-full bg-cyan-400/20 blur-2xl"></div>
               <div className="absolute -bottom-8 right-2 w-32 h-32 rounded-full bg-pink-400/20 blur-2xl"></div>
 
-              <div className="relative p-[3px] rounded-[2rem] bg-gradient-to-br from-cyan-400 via-violet-400 to-pink-400 shadow-2xl">
+              <div className="relative p-[3px] rounded-[2rem] bg-gradient-to-br from-cyan-400 via-violet-400 to-pink-400 shadow-2xl anim-float">
                 <div className="rounded-[2rem] bg-slate-900/90 p-3">
                   <Image
                     src="/ishakUpdate.png"
@@ -119,12 +121,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-center lg:text-left">
-              <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 text-cyan-300 font-medium mb-5">
+            <div className="text-center lg:text-left anim-fade-up anim-delay-1" data-reveal>
+              <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 text-cyan-300 font-medium mb-5 anim-fade-up anim-delay-2">
                 Full-Stack Web Developer
               </p>
 
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] mb-5">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] mb-5 anim-fade-up anim-delay-2">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
                   Building modern web
                 </span>
@@ -132,12 +134,12 @@ export default function Home() {
                 <span className="text-white">experiences.</span>
               </h2>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8 anim-fade-up anim-delay-3">
                 I am Ishak, a developer focused on creating clean interfaces and reliable backend systems with
                 React, Next.js, Node.js, and TypeScript.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-10 anim-fade-up anim-delay-3">
                 <a href="#project-form" className="w-full sm:w-auto text-center px-10 py-4 bg-white text-purple-700 font-bold rounded-full hover:scale-105 transition-all shadow-2xl">
                   View My Work
                 </a>
@@ -150,7 +152,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 md:gap-5 max-w-xl mx-auto lg:mx-0">
+              <div className="grid grid-cols-3 gap-3 md:gap-5 max-w-xl mx-auto lg:mx-0 anim-fade-up anim-delay-3">
                 <div className="rounded-xl bg-white/5 border border-white/10 p-4">
                   <p className="text-2xl font-bold text-cyan-300">25+</p>
                   <p className="text-sm text-gray-300">Projects</p>
@@ -168,7 +170,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="project-form" className="container mx-auto px-6 pb-10">
+        <section id="project-form" className="container mx-auto px-6 pb-10 reveal" data-reveal>
           <div className="max-w-6xl mx-auto rounded-2xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm">
             <h4 className="text-2xl md:text-3xl font-bold text-cyan-300 mb-2">Selected Work</h4>
             <p className="text-gray-300 mb-6">
@@ -203,7 +205,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="container mx-auto px-6 pb-8">
+        <section id="about" className="container mx-auto px-6 pb-8 reveal" data-reveal>
           <div className="max-w-4xl mx-auto rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-3 text-cyan-300">About Me</h3>
             <p className="text-gray-300 md:text-lg">
@@ -213,7 +215,7 @@ export default function Home() {
         </section>
 
         {/* Tech Stack */}
-        <section id="tech-stack" className="container mx-auto px-6 py-20">
+        <section id="tech-stack" className="container mx-auto px-6 py-20 reveal" data-reveal>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h3 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-300 via-sky-300 to-violet-300 bg-clip-text text-transparent">
@@ -240,19 +242,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="work" className="container mx-auto px-6 pb-8">
+        <section id="work" className="container mx-auto px-6 pb-8 reveal" data-reveal>
           <NextCon />
         </section>
 
-        <section id="services" className="container mx-auto px-6 pb-8">
+        <section id="services" className="container mx-auto px-6 pb-8 reveal" data-reveal>
           <SecCon />
         </section>
 
-        <section id="experience" className="container mx-auto px-6 pb-8">
+        <section id="experience" className="container mx-auto px-6 pb-8 reveal" data-reveal>
           <ThirdCon />
         </section>
 
-        <section id="contact-special" className="container mx-auto px-6 pb-8">
+        <section id="contact-special" className="container mx-auto px-6 pb-8 reveal" data-reveal>
           <div className="max-w-5xl mx-auto rounded-3xl border border-cyan-300/30 bg-gradient-to-r from-cyan-400/10 via-purple-400/10 to-pink-400/10 p-8 md:p-10 text-center shadow-[0_0_40px_rgba(34,211,238,0.15)]">
             <h3 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">
               Let&apos;s Start Your Project
